@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 300px;
+}
+
+.container{
+    padding: 0.625rem;
+}
+
+.title{
+    font-weight: bold;
+    margin-bottom: 0.625rem;
+}
+
+.bookmark{
+    display: flex;
+    padding: 0.3rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 0.3rem;
+    box-shadow: -2px 2px 2px 2px #cfcece;
+}
+
+.bookmark-controls{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.bookmark-controls img{
+    height: 20px;
+    cursor: pointer;
+}
