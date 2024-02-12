@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Invoice Generator</title>
+  </head>
+  <body>
+    <form>
+      <div
+        class="main_container"
+      >
+        <!-- Left section -->
+        <div
+          class="left_section"
+        >
+          <!-- current date due date -->
+          <div class="date">
+            <div class="date_01">
+              <!-- current-date -->
+              <div class="current_date">
+                <p class="font-bold">Current date:</p>
+                <span id="current-date"></span>
+              </div>
+              <!-- Invoice -->
+              <div
+                class="invoice_part"
+              >
+                <p class="font-bold">Invoice Number:</p>
+                <span class="invoice_span">
+                  <input
+                    id="invoice-number"
+                    type="number"
+                    value="1"
+                    class="invoice_addon"
+                  />
+                </span>
+              </div>
+            </div>
+            <!-- due date -->
+            <div class="due_date">
+              <p class="font-bold">Due Date:</p>
+              <input
+                type="date"
+                id="due-date"
+                class="due_cls"
+                required
+              />
+            </div>
+          </div>
+          <!-- Bill to bill from -->
+          <div class="bill_tofrom">
+            <!-- bill to -->
+            <div
+              class="bill_to"
+            >
+              <p class="font-bold">Bill to:</p>
+              <div class="bill_to_sub">
+                <input
+                  type="text"
+                  placeholder="Who is this invoice to?"
+                  class="bill_to_input"
+                  id="bill-to-name"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="bill_to_input"
+                  required
+                  id="bill-to-email"
+                />
+                <input
+                  type="text"
+                  placeholder="Billing Address"
+                  class="bill_to_input"
+                  required
+                  id="bill-to-address"
+                />
+              </div>
+            </div>
+            <!-- bill from -->
+            <div
+              class="bill_from"
+            >
+              <p class="font-bold">Bill from:</p>
+              <div class="bill_from_sub">
+                <input
+                  type="text"
+                  placeholder="Who is this invoice to?"
+                  class="bill_to_input"
+                  required
+                  id="bill-from-name"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="bill_to_input"
+                  required
+                  id="bill-from-email"
+                />
+                <input
+                  type="text"
+                  placeholder="Billing Address"
+                  class="bill_to_input"
+                  required
+                  id="bill-from-address"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Items -->
+          <div class="items_part">
+            <!-- Items fields -->
+            <div class="items_fields">
+              <div class="item">Item</div>
+              <div class="quantity">Qty</div>
+              <div class="price">Price/Rate</div>
+              <div class="action">action</div>
+            </div>
+            <div class="items-container">
+              <!-- Individual Items Here -->
+            </div>
+            <button
+              class="item_btn"
+              id="addItem"
+            >
+              Add Item
+            </button>
+          </div>
+          <!-- total section -->
+          <div class="total_part">
+            <div class="total_section">
+              <!-- sub - discount - tax -->
+              <div class="subDiscountTax">
+                <!-- Subtotal -->
+                <div class="subTotal">
+                  <p class="font-bold">Subtotal:</p>
+                  <div class="flex">
+                    <span class="symbol">$</span>
+                    <p id="subtotal">0</p>
+                  </div>
+                </div>
+                <!-- discount -->
+                <div class="discount01">
+                  <p class="font-bold">Discount:</p>
+                  <div class="flex">
+                    <span class="discount">(0%)</span>
+                    <span class="symbol">$</span>
+                    <p id="discount"></p>
+                  </div>
+                </div>
+                <!-- tax -->
+                <div class="tax01">
+                  <p class="font-bold">Tax:</p>
+                  <div class="flex">
+                    <span class="tax">(0%)</span>
+                    <span class="symbol">$</span>
+                    <p id="tax">0</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Total -->
+              <div
+                class="tot_final"
+              >
+                <p class="total02">Total:</p>
+                <div class="flex">
+                  <span class="symbol">$</span>
+                  <p id="total">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Notes -->
+          <div class="note_part">
+            <p class="note_p">Notes:</p>
+            <textarea
+              id="thankYouMessage"
+              cols="30"
+              rows="1"
+              class="note_textarea"
+              placeholder="Thanks for your business!"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Right section -->
+        <div
+          class="right_section"
+        >
+          <div class="right02">
+            <button
+              type="submit"
+              class="submit_btn"
+              id="reviewInvoice"
+            >
+              Review Invoice
+            </button>
+          </div>
+          <!-- currency tax Discount -->
+          <div class="currency_tax">
+            <!-- Currency -->
+            <div class="currency01">
+              <p class="font-bold">Currency:</p>
+              <select
+                id="currency"
+                class="cur_02"
+              >
+                <option value="USD" selected>USD (United States Dollar)</option>
+                <option value="GBP">GBP (British Pound Sterling)</option>
+                <option value="JPY">JPY (Japnese Yen)</option>
+                <option value="CAD">CAD (Canadian Dollar)</option>
+                <option value="AUD">AUD (Australian Dollar)</option>
+                <option value="SGD">SGD (Singapor Dollar)</option>
+                <option value="CNY">CNY (Chinese Renminbi)</option>
+                <option value="BTC">BTC (Bitcoin)</option>
+              </select>
+            </div>
+            <!-- Tax -->
+            <div class="tax_part">
+              <p class="font-bold">Tax Rate:</p>
+              <div class="tax_rate">
+                <input
+                  type="number"
+                  class="tax_input"
+                  value="0"
+                  id="tax-rate"
+                />
+                <p
+                  class="tax_p"
+                >
+                  %
+                </p>
+              </div>
+            </div>
+            <!-- Discount rate -->
+            <div class="disc_rate">
+              <p class="font-bold">Discount Rate:</p>
+              <div class="discount_rate">
+                <input
+                  type="number"
+                  class="discount_input"
+                  value="0"
+                  id="discount-rate"
+                />
+                <p
+                  class="disc_p"
+                >
+                  %
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoice -->
+        <div
+          class="invoice_part_popup"
+          id="invoice-container"
+        >
+          <div
+            id="bill-container"
+            class="bill_part"
+          >
+            <!-- to details and amount due-->
+            <div
+              class="amount_details"
+            >
+              <div class="details_abc">
+                <div class="detail_prod">
+                  <p class="toName font-bold text-2xl"></p>
+                  <p id="invoiceNumber" class="invoice_num">
+                    Invoice #: 1
+                  </p>
+                </div>
+                <div class="flex flex-col items-end">
+                  <p class="font-bold">Amount Due:</p>
+                  <p id="amountDue" class="details_num">$ 0</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- address -->
+            <div
+              class="w-full px-4 flex-col md:flex-row flex text-[0.8rem] justify-between py-6 max-md:gap-2"
+            >
+              <div class="flex flex-col w-[33%]">
+                <p class="font-bold text-[0.8rem]">Billed to:</p>
+                <p class="toName"></p>
+                <p id="addressTo" class=""></p>
+              </div>
+              <div class="flex flex-col w-[33%]">
+                <p class="font-bold text-[0.8rem]">Billed from:</p>
+                <p class="fromName"></p>
+                <p id="addressFrom" class=""></p>
+              </div>
+              <div class="flex flex-col w-[33%]">
+                <p class="font-bold text-[0.8rem]">Date of issue:</p>
+                <p id="dueDate" class=""></p>
+              </div>
+            </div>
+
+            <!-- bill qty... -->
+            <div class="w-full px-4 pb-4">
+              <!-- Hardcode values -->
+              <div class="flex w-full border-t border-b py-2">
+                <p class="uppercase w-[10%] font-bold text-[0.8rem]">qty</p>
+                <p class="uppercase w-[50%] md:w-[60%] font-bold text-[0.8rem]">
+                  description
+                </p>
+                <p class="uppercase w-[20%] md:w-[10%] font-bold text-[0.8rem]">
+                  price
+                </p>
+                <p class="uppercase w-[20%] font-bold text-[0.8rem]">amount</p>
+              </div>
+              <!-- Items list -->
+              <div class="items-container-bill flex flex-col">
+                
+              </div>
+              <!-- subtotal -->
+              <div class="w-full flex justify-end border-b">
+                <div class="w-[12rem] flex justify-between items-center py-2">
+                  <p class="font-semibold text-[0.8rem] uppercase">subtotal:</p>
+                  <p id="subtotal-bill" class="text-[0.8rem]"></p>
+                </div>
+              </div>
+              <!-- total -->
+              <div class="w-full flex justify-end border-b mb-6">
+                <div class="w-[12rem] flex justify-between items-center py-2">
+                  <p class="font-semibold text-[0.8rem] uppercase">total:</p>
+                  <p id="total-bill" class="text-[0.8rem]">$3000</p>
+                </div>
+              </div>
+              <!-- buttons -->
+              <div class="w-full flex justify-between">
+                <button
+                  class="w-[49%] py-2 bg-blue-600 text-white text-[0.8rem] font-semibold rounded-md flex justify-center items-center btns"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="me-2"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="width: 15px; height: 15px; margin-top: -3px"
+                  >
+                    <path
+                      d="M20.563,3.34c-0.292-0.199-0.667-0.229-0.989-0.079l-17,8C2.219,11.429,1.995,11.788,2,12.18 c0.006,0.392,0.24,0.745,0.6,0.902L8,15.445v6.722l5.836-4.168l4.764,2.084c0.128,0.057,0.265,0.084,0.4,0.084 c0.181,0,0.36-0.049,0.52-0.146c0.278-0.169,0.457-0.463,0.479-0.788l1-15C21.021,3.879,20.856,3.54,20.563,3.34z M18.097,17.68 l-5.269-2.306L16,9.167l-7.649,4.25l-2.932-1.283L18.89,5.794L18.097,17.68z"
+                    ></path>
+                  </svg>
+                  Send Invoice
+                </button>
+                <button
+                  class="w-[49%] py-2 border border-blue-600 text-blue-600 text-[0.8rem] font-semibold rounded-md hover:bg-blue-600 hover:text-white transition-colors duration-300 flex justify-center items-center btns"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="me-2"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="width: 16px; height: 16px; margin-top: -3px"
+                  >
+                    <path
+                      d="M18.948,11.112C18.511,7.67,15.563,5,12.004,5c-2.756,0-5.15,1.611-6.243,4.15C3.613,9.792,2.004,11.82,2.004,14 c0,2.757,2.243,5,5,5h1v-2h-1c-1.654,0-3-1.346-3-3c0-1.404,1.199-2.757,2.673-3.016l0.581-0.102l0.192-0.558 C8.153,8.273,9.898,7,12.004,7c2.757,0,5,2.243,5,5v1h1c1.103,0,2,0.897,2,2c0,1.103-0.897,2-2,2h-2v2h2c2.206,0,4-1.794,4-4 C22.004,13.119,20.699,11.538,18.948,11.112z"
+                    ></path>
+                    <path
+                      d="M13.004 14L13.004 10 11.004 10 11.004 14 8.004 14 12.004 19 16.004 14z"
+                    ></path>
+                  </svg>
+                  Download Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-black absolute left-0 top-0 text-white rounded-md opacity-0 hover:opacity-100 transition-opacity duration-300"
+      >
+        bait
+      </div>
+    </form>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script>
+  
+  document.querySelectorAll('.btns').forEach(button => {
+    button.addEventListener('click', () => {
+      const doc = new jsPDF();
+
+      // Add content to the PDF
+      doc.text('Invoice Details', 10, 10);
+      doc.text('Invoice Number: INV12345', 10, 20);
+      doc.text('Amount: $100', 10, 30);
+
+      // Save the PDF as a file
+      doc.save('invoice.pdf');
+    });
+  });
+</script> -->
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
