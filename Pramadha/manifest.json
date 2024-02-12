@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube video bookmarker",
+    "description": "An extension used to make bookmarks in YouTube videos",
+    "version": "1.0",
+    "host_permissions": [
+        "https://*.youtube.com/*"
+    ],
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "action": {
+        "default_icon": "./assets/ext-icon.png",
+        "default_popup": "./popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["./content/content.js"],
+            "matches": [
+                "https://*.youtube.com/*"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/bookmark.png",
+                "assets/play.png",
+                "assets/delete.png",
+                "assets/save.png"
+            ],
+            "matches": ["https://*.youtube.com/*"]
+        }
+    ]
+}
