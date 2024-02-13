@@ -18,7 +18,7 @@ Getting Started
 
 Usage 📝
 To get started with Invoice Generator, follow these simple steps:
-Clone the repository: git clone https://github.com/yourusername/invoice-generator.git
+Clone the repository: git clone https://github.com/Pramadha19/TEAM18_JAVASCRIPT-/tree/main/Yash_Khurana
 Open the project directory in your preferred code editor.
 Launch the index.html file in your web browser to start using the application.
 Screenshots
