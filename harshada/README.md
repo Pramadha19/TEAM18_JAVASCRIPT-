@@ -38,5 +38,32 @@ To run this website locally, follow these steps:
 
 # Screenshots of UI:
 
+ ![alt text](<Screenshot (273).png>) 
+  <br>
+  ![alt text](<Screenshot (274) - Copy.png>) 
+  <br>
+  ![alt text](<Screenshot (275) - Copy.png>) 
+  <br>
+  ![alt text](<Screenshot (276) - Copy.png>)
+  <br>
+  ![alt text](<Screenshot (277).png>)
+  <br>
+  ![alt text](<Screenshot (278) - Copy.png>)
+  <br>
+  ![alt text](<Screenshot (279) - Copy.png>) 
+  <br>
+  ![alt text](<Screenshot (280).png>)
+  <br>
+  ![alt text](<Screenshot (281).png>) 
+  <br>
+  ![alt text](<Screenshot (285).png>) 
+  <br>
+  ![alt text](<Screenshot (288).png>)
+  <br>
+  ![alt text](<Screenshot (289).png>)
+  <br>
+  ![alt text](<Screenshot (290).png>)
+
+
 
 
