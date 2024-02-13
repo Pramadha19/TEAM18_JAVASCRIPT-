@@ -18,6 +18,13 @@
                 chrome.storage.sync.set({ [currentVideo]: JSON.stringify(currentVideoBookMarks) });
             });
         }
+        else if (type === "SAVE"){
+            const videoUrl = `https://www.youtube.com/watch?v=${currentVideo}`;
+            chrome.downloads.download({
+                url: videoUrl,
+                filename: `${currentVideo}.mp4`
+            });
+        }
     });
 
     function fetchBookMarks() {
