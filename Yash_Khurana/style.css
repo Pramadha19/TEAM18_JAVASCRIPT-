@@ -10,21 +10,21 @@
     padding-bottom: 1rem;
     display:flex;
     gap: 1rem;
-    justify-content: flex-start;
-    flex-direction: column;
+  justify-content: flex-start;
+    /* flex-direction: column; */ 
 
 }
 .left_section{
-        width: 100%;
+        /* width: 100%; */
         width: 70%;
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
         margin-left: 3rem;
         height: 100vh;
         border-radius: 0.375rem;
         background-color: #ffffff;
         /* border: 1px solid;  */
-        padding-left: 1rem;
-        padding-right: 1rem;
+        /* padding-left: 1rem;
+        padding-right: 1rem; */
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         overflow-y: scroll;
@@ -53,7 +53,7 @@
 }
 .invoice_part{
         display: flex;
-        flex-direction: row;
+        
         flex-direction: column;
         align-items: center;
         font-size: 0.8rem;
@@ -231,9 +231,9 @@
         font-size: 0.8rem;
 }
 .right_section{
-        width: 100%;
-        position: fixed;
-        right: 3rem;
+        /* width: 100%; */
+        /* position: fixed; */
+        /* right: 3rem; */
         border-radius: 0.375rem; 
         height: 50vh;
         display: flex;
@@ -254,8 +254,8 @@
     padding-bottom: 0.75rem;
     border-radius: 0.375rem;
     color: black;
-    font-weight: 1600;
-    font-size: 0.8rem;
+    font-weight:bold;
+    font-size: 1rem;
     background-color: #2563eb;
     
 }
@@ -264,19 +264,19 @@
     background-color: #1d4ed8; 
     color:#ffffff;
 }
-.currency_tax{
+ .currency_tax{
         display: flex;
         flex-direction: column;
         font-size: 0.8rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         margin-top: 0.75rem;
-}
-.currency01{
+} 
+ .currency01{
         display: flex;
         flex-direction: column;
         margin-top: 0.5rem;
-}
+} 
 .cur_02{
         outline: none;
         padding-top: 0.75rem;
@@ -296,7 +296,7 @@
    display: flex; 
    width: 100%;
 }
-.tax_input{
+ .tax_input{
         width: 90%; 
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
@@ -304,9 +304,9 @@
         padding-right: 0.5rem;
         /* border: 1px solid; */
         outline: none;
-        border-radius: 0.125rem;
-}
-.tax_p{
+        border-radius: 0.125rem; 
+} 
+ .tax_p{
         width: 10%;
         display: flex;
         padding-top: 0.5rem;
@@ -316,7 +316,7 @@
         background-color: #F8F9FA; 
         /* border: 1px solid;  */
         border-radius: 0.125rem; 
-}
+} 
 .disc_rate{
     display: flex;
     flex-direction: column;
@@ -398,4 +398,54 @@
     &::-webkit-scrollbar {
         display: none;
     }
+}
+@media screen and (min-width:680px) and (max-width: 1170px){
+    .left_section{
+        width: 60%;
+    }
+    /* .right_section{
+        width: 15%;
+    } */
+    .submit_btn{
+        font-size:1rem;
+    }
+}
+@media screen and (max-width: 680px) {
+    .main_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left_section {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .right_section {
+        width: 100%;
+    }
+
+    .right02 {
+        width: 100%; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .submit_btn {
+        font-size: 0.8rem;
+        width: 80%;
+        margin-top: 1rem;
+    }
+    .bill_tofrom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bill_to,
+.bill_from {
+    width:100%;
+}
+
 }

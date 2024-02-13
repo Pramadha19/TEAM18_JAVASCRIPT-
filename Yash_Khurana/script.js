@@ -1,3 +1,19 @@
+document.querySelector("#generatePDF").addEventListener("click", () => {
+  console.log("hmm");
+  const content = document.querySelector("#bill-container");
+  html2pdf().from(content).save();
+});
+
+// $("#generatePDF").click(function () {
+//   doc.fromHTML($("#bill-container").html(), 15, 15, {
+//     width: 700,
+//     elementHandlers: specialElementHandlers,
+//   });
+//   doc.save("sample_file.pdf");
+// });
+
+// script part!
+
 let itemsContainer = document.querySelector(".items-container");
 
 let allItemsDetails = [];
@@ -6,8 +22,8 @@ let allItemsDetails = [];
 var currentDate = document.querySelector("#current-date");
 var date = new Date();
 currentDate.innerHTML = ""
-  .concat(date.getDate(), "/")
   .concat(date.getMonth() + 1, "/")
+  .concat(date.getDate(), "/")
   .concat(date.getFullYear());
 
 // invoice number
@@ -198,6 +214,7 @@ function calculateTotalSub() {
 let taxInput = document.getElementById("tax-rate");
 taxInput.addEventListener("input", () => {
   tax = taxInput.value;
+  document.querySelector(".tax").innerHTML = `(${tax}%)`;
   calculateTotalSub();
 });
 
@@ -327,3 +344,9 @@ document.querySelectorAll(".btns").forEach((val) => {
     e.preventDefault();
   });
 });
+const sendInvoiceBtn = document.getElementById('sendInvoiceBtn');
+
+    sendInvoiceBtn.addEventListener('click', function() {
+        // Redirect to WhatsApp
+        window.location.href = 'https://www.whatsapp.com/'; 
+    });

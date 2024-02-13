@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="style.css" />
     <title>Invoice Generator</title>
   </head>
@@ -335,10 +336,10 @@
                 </div>
               </div>
               <!-- buttons -->
-              <div class="w-full flex justify-between">
+              <div class="w-[50%] flex justify-between -mt-11">
                 <button
                   class="w-[49%] py-2 bg-blue-600 text-white text-[0.8rem] font-semibold rounded-md flex justify-center items-center btns"
-                >
+                  id="sendInvoiceBtn">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -357,7 +358,8 @@
                   Send Invoice
                 </button>
                 <button
-                  class="w-[49%] py-2 border border-blue-600 text-blue-600 text-[0.8rem] font-semibold rounded-md hover:bg-blue-600 hover:text-white transition-colors duration-300 flex justify-center items-center btns"
+                  class="w-[45%] py-2 border border-blue-600 text-blue-600 text-[0.8rem] font-semibold rounded-md hover:bg-blue-600 hover:text-white transition-colors duration-300 flex justify-center items-center btns"
+                  id="generatePDF"
                 >
                   <svg
                     stroke="currentColor"
@@ -383,31 +385,20 @@
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="bg-black absolute left-0 top-0 text-white rounded-md opacity-0 hover:opacity-100 transition-opacity duration-300"
-      >
-        bait
-      </div>
-    </form>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-<script>
-  
-  document.querySelectorAll('.btns').forEach(button => {
-    button.addEventListener('click', () => {
-      const doc = new jsPDF();
-
-      // Add content to the PDF
-      doc.text('Invoice Details', 10, 10);
-      doc.text('Invoice Number: INV12345', 10, 20);
-      doc.text('Amount: $100', 10, 30);
-
-      // Save the PDF as a file
-      doc.save('invoice.pdf');
-    });
-  });
-</script> -->
-
-    <script src="script.js" defer></script>
-  </body>
-</html>
+        <div
+          class="bg-black absolute left-0 top-0 text-white rounded-md opacity-0 hover:opacity-100 transition-opacity duration-300"
+        >
+          bait
+        </div>
+      </form>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+      <script src="script.js" defer></script>
+    </body>
+  </html>
