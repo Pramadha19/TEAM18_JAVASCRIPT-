@@ -1,0 +1,305 @@
+body{
+    font-family: Roboto, Arial, Tahoma, sans-serif;
+   background-color:#D9EEF3;
+   color: #1794AD;
+}
+.firstdiv{
+   display: flex;
+ flex-direction: column;
+    align-items: center;
+   text-align: center;
+   height: 100vh;
+   width: 17vw;
+ position: fixed;
+
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+  position: relative;
+  
+   
+}
+.maaa{
+position: relative;
+
+left: 18vw;
+}
+.secdiv{
+    text-align: center;
+}
+#main2{
+    z-index: +1;
+   top:12vh;
+   position: relative;
+  box-shadow: -1px 1px  3px 1px lightgray;
+ 
+   width: 70vw;
+   height: 76vh;
+    border-radius: 1vw;
+   
+}
+#myframe{
+    border-radius: 2vw;
+}
+#tableicon{
+width: 10px;
+}
+.table2{
+   
+    width: 100%;
+    
+    height: 70vh;
+  
+    }
+.tabledata{
+  display: flex;
+ cursor: pointer;
+  align-items: center;
+  text-align: center;
+ 
+ }
+
+
+.thirddiv{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+   justify-content: space-around;
+   position: relative;
+}
+.imgshiva{
+    position: absolute;
+    
+   left: 0px;
+   top: 126px;
+    width: 90px;
+}
+.imgshiva2{
+    position: absolute;
+    
+   right: 50px;
+   top: 180px;
+    width: 150px;
+}
+
+.mainsecond{
+    width: 100%;
+  display: flex;
+  margin-top: 10vh;
+  justify-content: space-between;
+  
+   
+}.mainsec1{
+    background-color: white;
+    border:  1px solid #1794AD;
+    border-radius: 2vw;
+    width: 20vw;
+    height: 55vh;
+   flex-wrap: wrap;
+    font-size: 11px;
+   align-items: center;
+   text-align: center;
+}
+.mainsec1 img{
+    width:100%;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+.mainsec1  span{
+    color: blue;
+    text-decoration: underline;
+}
+.mainsec2  span{
+    color: blue;
+    text-decoration: underline;
+}
+.mainsecond2{
+    width: 100%;
+    display: flex;
+    margin-top: 10vh;
+   justify-content: space-around;
+
+}
+.mainsec2{
+   background-color: white;
+    border:  1px solid #1794AD;
+    border-radius: 2vw;
+    width: 32vw;
+    height: 55vh;
+   flex-wrap: wrap;
+    font-size: 11px;
+   align-items: center;
+   text-align: center;
+}
+.mainsecond2 img{
+    width: 100%;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+.heading{
+ text-align: center;
+ padding-top: 20vh;
+ 
+ 
+}
+.thirdpage{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.mod{
+    display: flex;
+    gap: 2vw;
+    
+    align-items: center;
+}
+.mode{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+   
+   gap: 5vw;
+    background-color: aliceblue;
+    border-radius: 2px;
+   width: fit-content;
+   height:max-content;
+   
+}
+.mode span:hover{
+    background-color: rgb(255, 196, 0);
+    cursor: pointer;
+    border-radius: 2px;
+    
+}
+.typeing span{
+    position: relative;
+}
+.typeing span.active{
+    color: #17a2b8;
+
+}
+.typeing span.correct{
+    color:green;
+}
+.typeing span.incorrect{
+    color:red;
+}
+.typeing span.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background: #17a2b8;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink{
+    50%{
+        opacity: 1;
+    }
+}
+.slectvalue{
+    align-items: center;
+   display: flex;
+   border-radius: 2vw;
+   width: 20vw;
+   height: 8vh;
+  border: none;
+  margin-top: 10px;
+   box-shadow: 1px 1px 2px lightgray;
+   padding-left: 1vw;
+   justify-content: center;
+   
+}
+.slectvalue:hover{
+
+    cursor: pointer;
+    background-color: rgb(221, 212, 212);
+}
+#selctbtn{
+    position: absolute;
+    z-index: +5;
+    left: 21vw;
+    top:65vh;
+    width: 15vw;
+    height: 7vh;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 0, 0.534);
+    color: white;
+}
+.mainsec1:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+.mainsec2:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+.lastdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+.lastdiv button{
+    width: 12vw;
+    height: 7vh;
+    border-radius: 20px;
+   border: 1px solid lightgrey;
+    box-shadow: 1px 1px 1px skyblue;
+}
+.lastdiv button:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.lastdiv span{
+    color: blue;
+    text-decoration:underline;
+}
+.inputtext{
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+}
+.mistke {
+display: flex;
+align-items: center;
+}
+.mistke p{
+    color: blue;
+    text-transform: uppercase;
+
+}
+.mod{
+    display: flex;
+    align-items: center; 
+    
+}
+.mod p{
+    color: blue;
+   
+}
+.tryagainbtn{
+    width: 11vw;
+    background-color: rgba(0, 128, 0, 0.521);
+    color: white;
+    border: 20px;
+    box-shadow: 1px 1px 2px green;
+}
+
+
+
+
+
