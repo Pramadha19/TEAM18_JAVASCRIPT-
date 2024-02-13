@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body id="main">
+    <div class="firstdiv" >
+        <img src="./img2/logo-light.svg" alt="" style="width: 20px;">
+        <h4 >TypingTest.com</h4>
+        <table class="table2" >
+           
+            <tr >
+                <td class="tabledata" id="tab" style="background-color:#1794AD ; color: white;border-radius: 1vw;"  onmouseover="myfunc(this)"onmouseout="myfunc2(this)" onclick="myfunction4()">Typing Tests <span class="material-symbols-outlined">
+                    chevron_right
+                    </span> 
+                </td>
+            </tr>
+            <tr >
+                <td class="tabledata"   onmouseover="myfunc(this)"onmouseout="myfunc2(this)">Typing Lessons <span class="material-symbols-outlined">
+                    chevron_right
+                    </span> </td>
+            </tr>
+            <tr>
+                <td class="tabledata"  onmouseover="myfunc(this)"onmouseout="myfunc2(this)">Tricky Keys <span class="material-symbols-outlined">
+                    chevron_right
+                    </span></td>
+            </tr>
+            <tr>
+                <td class="tabledata" onmouseover="myfunc(this)"onmouseout="myfunc2(this)">Typing Tests <span class="material-symbols-outlined">
+                    chevron_right
+                    </span> </td>
+            </tr>
+            <tr>
+                <td class="tabledata"  onmouseover="myfunc(this)"onmouseout="myfunc2(this)"> Typing Tests <span class="material-symbols-outlined">
+                    chevron_right
+                    </span></td>
+            </tr>
+            <tr>
+                <td class="tabledata" onmouseover="myfunc(this)"onmouseout="myfunc2(this)">Typing Tests <span class="material-symbols-outlined">
+                    chevron_right
+                    </span> </td>
+            </tr>
+           
+        </table>
 
+        
+     
+    </div>
+    <div class="maaa">
+
+    <div  id="main2" >
+        <iframe src="./shiva.html" id="myframe" frameborder="0" width="100%" height="100%"></iframe>
+        <img src="./img/shiva12.svg" alt="" class="imgshiva " >
+        <img src="./img/shiva11.svg" alt="" class="imgshiva2">
+      
+    </div>
+    <button onclick="myfunction3()" id="selctbtn"  >Start test</button>
+    
+    <div >
+       <div class="heading"> <h3 style="display: flex; align-items: center;justify-content: center;">Take The Next Step <span class="material-symbols-outlined">
+        footprint
+        </span></h3></div>
+    <div class="mainsecond">
+        <div class="mainsec1">
+            <img src="./img2/1.jpg" alt="">
+            <div>
+                <h4>Train Typing Skills</h4>
+                <p>What if you could type as fluently as you speak? Tying Trainer web course will get you ther!</p>
+            </div>
+        </div>
+        <div class="mainsec1">
+            <img src="./img2/2.jpg" alt="">
+            <div>
+                <h4>Play Typing Games</h4>
+                <p>Now the joy starts! Play our numerous fun <span>Typing.games</span>
+                to become a true keyboard master</p>
+            </div>
+        </div>
+        <div class="mainsec1">
+            <img src="./img2/3.jpg" alt="">
+            <div>
+                <h4>TypeTastic for Schools</h4>
+                <p>Discover <span>700+typing activities</span>
+                for all grade levels- and unleash the joy of typing in your school.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div>
+        <div class="heading">
+           
+                
+    <h3 style="display: flex; align-items: center;justify-content: center;"> <span class="material-symbols-outlined" >
+        experiment 
+        </span>Well,What's New!</h3></div>
+    <div class="mainsecond2">
+        
+        <div  class="mainsec2">
+            <img src="./img2/4.png" alt="">
+            <h4>Typing Certificate Now Online</h4>
+            <p>A ceritificate has been one of the most requested features and we are happy to announce that a test with a printable certificate is now available! The certification test consists of 5 minutes of typing predefined source test in English <span>Read more</span></p>
+        </div>
+        <div  class="mainsec2">
+            <img src="./img2/5.png" alt="">
+            <h4>Join the Worldwide Typing League</h4>
+            <p>Compete against other talented typists around the globe and show where the best typists come from. Each country has its own league and you can advance higher in the rankings by completing races and collecting points.<span> Start the Race!</span></p>
+        </div>
+    </div>
+    <div class="lastdiv">
+    <button>More Games</button>
+    <p>© 2024 Cloud Kayak Labs, Inc
+       <span> Privacy policy
+        Disclaimer</span></p>
+</div>
+</div>
+</div>
+    <script>
+
+        let main=document.getElementById('main')
+       
+
+    function myfunc(x){
+        
+      x.style.backgroundColor=" #1794AD"
+        x.style.color="white"
+      x.style.borderRadius="1vw"
+    }
+    function myfunc2(x){
+       document.getElementById("tab").style.backgroundColor="#1794AD"
+       document.getElementById("tab").style.color="white"
+        x.style.backgroundColor="#D9EEF3"
+        x.style.color="#1794AD"
+    }
+    function myfunction3(){
+        
+        document.querySelector(".imgshiva").src=" ";
+        document.querySelector(".imgshiva2").src=" ";
+       
+        let div2=document.getElementById('myframe').src='./thirdindex.html';
+      document.getElementById("selctbtn").style.display="none"
+       
+    }
+    function myfunction4(){
+        document.getElementById("selctbtn").style.display="flex"
+        document.querySelector(".imgshiva").src="./img/shiva12.svg";
+        document.querySelector(".imgshiva2").src="./img/shiva11.svg ";
+        let div2=document.getElementById('myframe').src='./shiva.html';
+    }
+    </script>
+    <script type="module" src="js/paragraph.js"></script>
+    <script type="module" src="js/script.js"></script>
+    
+</body>
+</html>
