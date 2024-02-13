@@ -37,6 +37,16 @@ async function onDelete(e) {
     });
 }
 
+async function onSave(e) {
+    const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
+    const activeTab = await getCurrentTabURL();
+
+    chrome.tabs.sendMessage(activeTab.id, {
+        type: "SAVE",
+        value: bookmarkTime
+    });
+}
+
 function addNewBookmark(bookmarkElement, bookmark) {
     const bookmarkContainer = document.createElement("div");
     const bookmarkTitle = document.createElement("div");
@@ -52,6 +62,7 @@ function addNewBookmark(bookmarkElement, bookmark) {
 
     setBookmarkAttributes("play", onPlay, controlsElement);
     setBookmarkAttributes("delete", onDelete, controlsElement);
+    setBookmarkAttributes("save", onSave, controlsElement); // Adding the Save button
 
     bookmarkContainer.appendChild(bookmarkTitle);
     bookmarkContainer.appendChild(controlsElement);
